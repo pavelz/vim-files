@@ -14,20 +14,23 @@ if empty($MYVIMRC)
 endif
 
 " Using some string functions to extract the directory from $MYVIMRC
-let rcpath = strpart($MYVIMRC, 0, strridx($MYVIMRC, '/'))
-let userpath = rcpath . '/user'
-let vundlepath = rcpath . '/bundle/vundle'
-let &runtimepath = rcpath . ',' .  userpath . ',' . vundlepath . ',' . $VIMRUNTIME
-
+let rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '/'))
+" Source user settings directory
+let user_rc_dir = rc_dir . '/user'
+let s:user_init = user_rc_dir . '/rc.vim'
+if filereadable(s:user_init)
+	exe 'source' s:user_init
+endif
 " Initialize vundle for easy plugin management
-set nocompatible               " be iMproved
-filetype off                   " required!
+let s:vundle_dir = rc_dir . '/bundle/vundle'
+let &runtimepath = rc_dir . ',' . user_rc_dir . ',' . s:vundle_dir . ',' . $VIMRUNTIME
+
 call vundle#rc()
 
 " Required setup
 Bundle 'tarruda/vundle'
 
-" Plugins
+" Load plugins
 Bundle 'tarruda/L9'
 Bundle 'tarruda/FuzzyFinder'
 Bundle 'tarruda/mustache.vim'
@@ -39,4 +42,5 @@ Bundle "tarruda/snipmate-snippets"
 Bundle 'tarruda/vim-snipmate'
 Bundle 'tarruda/nerdtree'
 Bundle 'tarruda/sessionman.vim'
+
 

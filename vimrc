@@ -24,10 +24,18 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 call vundle#rc()
 
+" Required setup
 Bundle 'tarruda/vundle'
 
+" Plugins
 Bundle 'tarruda/L9'
 Bundle 'tarruda/FuzzyFinder'
+Bundle 'tarruda/mustache/vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
+Bundle "tarruda/vim-addon-mw-utils"
+Bundle "tarruda/tlib_vim"
+Bundle "tarruda/snipmate-snippets"
+Bundle 'tarruda/vim-snipmate'
+Bundle 'tarruda/nerdtree'
 

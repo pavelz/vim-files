@@ -30,7 +30,7 @@ Bundle 'tarruda/vundle'
 " Plugins
 Bundle 'tarruda/L9'
 Bundle 'tarruda/FuzzyFinder'
-Bundle 'tarruda/mustache/vim'
+Bundle 'tarruda/mustache.vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
 Bundle "tarruda/vim-addon-mw-utils"

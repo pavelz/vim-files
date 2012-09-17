@@ -18,6 +18,9 @@ set incsearch
 set hlsearch 
 " Shows line numbers
 set number
+" Global tab settings
+set expandtab
+set tabstop=8
 " Enable syntax highlighting
 syntax on
 " Enable filetype-specific settings

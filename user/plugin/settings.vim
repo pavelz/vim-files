@@ -1,5 +1,3 @@
-""" General settings
-
 " Allows backspacing over everything in insert mode
 set backspace=indent,eol,start
 " Disable backup
@@ -22,7 +20,3 @@ set number
 syntax on
 " Enable filetype-specific settings
 filetype plugin indent on
-" Close VIM if NERDTree is the only buffer left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" Ignore some file patterns when searching with FuzzyFinder
-let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp|\.class$'

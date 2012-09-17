@@ -1,7 +1,5 @@
 " Leader key
 let mapleader = ","
-" Toggle NERDTree
-nnoremap <silent> <Tab> :NERDTreeToggle<CR>
 " Toggle tab list
 nnoremap <silent> <F8> :TlistToggle<CR>
 " Map omni completion to Ctrl + SPACE

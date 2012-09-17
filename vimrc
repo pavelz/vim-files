@@ -38,4 +38,5 @@ Bundle "tarruda/tlib_vim"
 Bundle "tarruda/snipmate-snippets"
 Bundle 'tarruda/vim-snipmate'
 Bundle 'tarruda/nerdtree'
+Bundle 'tarruda/sessionman.vim'
 

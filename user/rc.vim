@@ -12,15 +12,31 @@ set history=500
 set ruler	
 " display incomplete commands
 set showcmd
-" do incremental searching
-set incsearch
-" use highlighting when searching
-set hlsearch 
 " Shows line numbers
 set number
 " Global tab settings
 set expandtab
 set tabstop=8
+" Disable a feature I neveruse
+set modelines=0
+" Show relative line numbers(better for navigating with motion quantifiers)
+set relativenumber
+" Creates <FILENAME>.un~ for undoing changes after closing files
+set undofile
+" Search options:
+" - Ignore case if all characters in pattern are lowercase
+set ignorecase
+set smartcase
+" Global search by default
+set gdefault
+" Better search feedback
+set incsearch
+set showmatch
+set hlsearch
+" Wrap text automatically
+set wrap
+" Normal text width
+set textwidth=79
 " Enable syntax highlighting
 syntax on
 " Enable filetype-specific settings

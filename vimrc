@@ -27,17 +27,19 @@ call vundle#rc()
 " Required setup
 Bundle 'tarruda/vundle'
 " Load plugins
-Bundle 'tarruda/L9'
-Bundle 'tarruda/FuzzyFinder'
+Bundle 'tarruda/ctrlp.vim'
 Bundle 'tarruda/mustache.vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
+" Snipmate
 Bundle "tarruda/vim-addon-mw-utils"
 Bundle "tarruda/tlib_vim"
 Bundle "tarruda/snipmate-snippets"
 Bundle 'tarruda/vim-snipmate'
+"
 Bundle 'tarruda/nerdtree'
 Bundle 'tarruda/sessionman.vim'
+Bundle 'tarruda/vim-addon-local-vimrc'
 
 " Source user settings directory
 let s:user_init = user_rc_dir . '/rc.vim'

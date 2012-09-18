@@ -13,6 +13,14 @@ vnoremap / /\v
 " (in normal and visual mode)
 nnoremap <tab> %
 vnoremap <tab> % 
+" Page up/down
+nnoremap <C-k> <C-b>
+nnoremap <C-j> <C-f>
+" Easily move lines
+nnoremap <silent> <S-j> :silent! m .+1<CR>==
+nnoremap <silent> <S-k> :silent! m .-2<CR>==
+vnoremap <silent> <S-j> :silent! m '>+1<CR>gv=gv
+vnoremap <silent> <S-k> :silent! m '<-2<CR>gv=gv
 " Disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>

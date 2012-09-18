@@ -1,4 +1,4 @@
 let g:local_vimrc = {
-  \ 'names': ['.lvimrc'],
-  \ 'hash_fun': 'LVRHashOfFile'
-  \ }
+      \ 'names': ['.lvimrc'],
+      \ 'hash_fun': 'LVRHashOfFile'
+      \ }

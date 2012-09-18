@@ -45,10 +45,10 @@ filetype plugin indent on
 " Load user settings
 let s:user_rc_files = user_rc_dir . '/rc.d/**/*.vim'
 for f in split(glob(s:user_rc_files), '\n')
-    exe 'source' f
+  exe 'source' f
 endfor
 " Load user bundle-specific settings
 let s:bundle_rc_files = user_rc_dir . '/bundle-rc.d/**/*.vim'
 for f in split(glob(s:bundle_rc_files), '\n')
-    exe 'source' f
+  exe 'source' f
 endfor

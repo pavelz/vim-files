@@ -7,18 +7,34 @@
 "   path so it can be its own git repository separate from my dotfiles.       "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Little hack to set the $MYVIMRC from the $VIMINIT in the case it only
-" contains a source command
+let g:is_windows = has('win32') || has('win64')
+
+" Little hack to set the $MYVIMRC from the $VIMINIT in the case it was used to 
+" initialize vim.
+let s:default_vimrc = 1
 if empty($MYVIMRC)
-    let $MYVIMRC = substitute($VIMINIT, "^source ", "", "g")
+  let $MYVIMRC = substitute($VIMINIT, "^source ", "", "g")
+  let s:default_vimrc = 0
 endif
 
-" Using some string functions to extract the directory from $MYVIMRC
-let rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '/'))
-" Put vundle and user rc dir to the runtime
-let user_rc_dir = rc_dir . '/user'
-let s:vundle_dir = rc_dir . '/bundle/vundle'
-let &runtimepath = rc_dir . ',' . user_rc_dir . ',' . s:vundle_dir . ',' . $VIMRUNTIME
+" Extract the directory from $MYVIMRC (platform-specific)
+if g:is_windows
+  let g:rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '\'))
+  if s:default_vimrc
+    " Set vimfiles as the rc_dir
+    let g:rc_dir = g:rc_dir.'\vimfiles'
+  endif
+else
+  let g:rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '/'))
+  if s:default_vimrc
+    " Set .vim as the rc_dir
+    let g:rc_dir = g:rc_dir.'/.vim'
+  endif
+endif
+
+let g:user_rc_dir = g:rc_dir . '/user'
+let s:vundle_dir = g:rc_dir . '/bundle/vundle'
+let &runtimepath = g:rc_dir . ',' . g:user_rc_dir . ',' . s:vundle_dir . ',' . $VIMRUNTIME
 
 filetype off " Required
 
@@ -42,7 +58,7 @@ Bundle 'tarruda/sessionman.vim'
 Bundle 'tarruda/vim-addon-local-vimrc'
 
 " Source user settings directory
-let s:user_init = user_rc_dir . '/rc.vim'
+let s:user_init = g:user_rc_dir . '/rc.vim'
 if filereadable(s:user_init)
-    exe 'source' s:user_init
+  exe 'source' s:user_init
 endif

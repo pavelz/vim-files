@@ -2,7 +2,7 @@
 if has('gui_running')
   colorscheme twilight
   if g:is_windows
-    set guifont=Lucida_Console \14
+    set guifont=Consolas:h12
   else
     set guifont=Monospace\ 14
   endif

@@ -1,7 +1,7 @@
 " Leader mappings
 let mapleader = ","
 " Type , + space to clear search
-nnoremap <leader><space> :noh<cr>
+nnoremap <silent> <leader><space> :noh<cr>
 " Toggle tab list
 nnoremap <silent> <F8> :TlistToggle<CR>
 " Fold using F9
@@ -13,6 +13,8 @@ vnoremap / /\v
 " (in normal and visual mode)
 nnoremap <tab> %
 vnoremap <tab> % 
+" Move between splits using TAB
+nnoremap <C-tab> <C-w>w
 " Page up/down
 nnoremap <C-k> <C-b>
 nnoremap <C-j> <C-f>

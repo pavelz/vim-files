@@ -3,8 +3,15 @@
 " Author:	Thiago de Arruda                                              "
 " Description:                                                                "  
 "   My custom vim startup file.                                               " 
-"   This file's purpose is to set directory containing itself as the runtime  "
-"   path so it can be its own git repository separate from my dotfiles.       "
+"                                                                             "
+"   This script does the following:                                           "
+"     1 - sets the runtimepath to ./user and ./bundle/vundle.                 "
+"     2 - initalize bundles.                                                  "
+"     3 - execute rc files in ./user.                                         "
+"                                                                             "
+"   The main purpose is organize my plugins/initialization commands and keep  "
+"   each separated from third party bundles.                                  " 
+"                                                                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:is_windows = has('win32') || has('win64')
@@ -20,21 +27,18 @@ endif
 " Extract the directory from $MYVIMRC (platform-specific)
 if g:is_windows
   let g:rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '\'))
-  if s:default_vimrc
-    " Set vimfiles as the rc_dir
-    let g:rc_dir = g:rc_dir.'\vimfiles'
-  endif
 else
   let g:rc_dir = strpart($MYVIMRC, 0, strridx($MYVIMRC, '/'))
-  if s:default_vimrc
-    " Set .vim as the rc_dir
-    let g:rc_dir = g:rc_dir.'/.vim'
-  endif
 endif
 
-let g:user_rc_dir = g:rc_dir . '/user'
-let s:vundle_dir = g:rc_dir . '/bundle/vundle'
-let &runtimepath = g:rc_dir . ',' . g:user_rc_dir . ',' . s:vundle_dir . ',' . $VIMRUNTIME
+if s:default_vimrc
+  " Set .vim as the rc_dir
+  let g:rc_dir = g:rc_dir.'/.vim'
+endif
+
+let g:user_rc_dir = g:rc_dir.'/user'
+let s:vundle_dir = g:rc_dir.'/bundle/vundle'
+let &runtimepath = g:rc_dir.','.g:user_rc_dir.','.s:vundle_dir.','.$VIMRUNTIME
 
 filetype off " Required
 
@@ -58,7 +62,7 @@ Bundle 'tarruda/sessionman.vim'
 Bundle 'tarruda/vim-addon-local-vimrc'
 
 " Source user settings directory
-let s:user_init = g:user_rc_dir . '/rc.vim'
+let s:user_init = g:user_rc_dir.'/rc.vim'
 if filereadable(s:user_init)
   exe 'source' s:user_init
 endif

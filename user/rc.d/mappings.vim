@@ -2,6 +2,18 @@
 let mapleader = ","
 " Type , + space to clear search
 nnoremap <silent> <leader><space> :noh<cr>
+" Workaround for terminals that arent compatible with the way
+" vim understands alt key combinations. From
+" http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim
+if ! has('gui_running') " GVim handles alt keys itself
+  let s:c='a'
+  while s:c <= 'z'
+    exec "set <A-".s:c.">=\e".s:c
+    exec "map \e".s:c." <A-".s:c.">"
+    let s:c = nr2char(1+char2nr(s:c))
+  endwhile
+  set timeout ttimeoutlen=50
+endif
 " Toggle tab list
 nnoremap <silent> <F8> :TlistToggle<CR>
 " Fold using F9
@@ -19,10 +31,10 @@ nnoremap <C-tab> <C-w>w
 nnoremap <C-k> <C-b>
 nnoremap <C-j> <C-f>
 " Easily move lines
-nnoremap <silent> <S-j> :silent! m .+1<CR>==
-nnoremap <silent> <S-k> :silent! m .-2<CR>==
-vnoremap <silent> <S-j> :silent! m '>+1<CR>gv=gv
-vnoremap <silent> <S-k> :silent! m '<-2<CR>gv=gv
+nnoremap <silent> <A-j> :silent! m .+1<CR>==
+nnoremap <silent> <A-k> :silent! m .-2<CR>==
+vnoremap <silent> <A-j> :silent! m '>+1<CR>gv=gv
+vnoremap <silent> <A-k> :silent! m '<-2<CR>gv=gv
 " Disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>

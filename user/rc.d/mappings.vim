@@ -14,8 +14,6 @@ if ! has('gui_running') " GVim handles alt keys itself
   endwhile
   set timeout ttimeoutlen=50
 endif
-" Fold using F9
-nnoremap <F9> za
 " Use normal metacharacters in vim searches
 nnoremap / /\v
 vnoremap / /\v

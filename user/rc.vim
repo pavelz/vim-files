@@ -35,6 +35,11 @@ set hlsearch
 set wrap
 " Normal text width
 set textwidth=79
+" Folding setup
+set foldmethod=indent
+set foldnestmax=10
+set foldenable
+set foldlevel=1
 " Enable syntax highlighting
 syntax on
 " Enable filetype-specific settings

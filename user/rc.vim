@@ -38,7 +38,7 @@ set textwidth=79
 " Folding setup
 set foldmethod=indent
 set foldnestmax=10
-set foldenable
+set nofoldenable
 set foldlevel=1
 " Enable syntax highlighting
 syntax on

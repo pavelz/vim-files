@@ -1,6 +1,6 @@
 " Appearance settings for gvim
 if has('gui_running')
-  colorscheme twilight
+  colorscheme twilight_darker
   if g:is_windows
     set guifont=Consolas:h12
   else

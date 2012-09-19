@@ -9,6 +9,7 @@ endif
 
 let colors_name = "twilight"
 
+let s:light_blue = '#4bb5c6'
 let s:grey_blue = '#8a9597'
 let s:light_grey_blue = '#a0a8b0'
 let s:dark_grey_blue = '#34383c'
@@ -20,6 +21,7 @@ let s:yellow = '#e3d796'
 let s:violet = '#a999ac'
 let s:green = '#a2a96f'
 let s:lightgreen = '#c2c98f'
+let s:dark_green = '#62691f'
 let s:red = '#d08356'
 let s:cyan = '#74dad9'
 let s:darkgrey = '#1a1a1a'
@@ -70,19 +72,20 @@ exe 'hi TODO           guifg='.s:grey_blue         .' guibg='.s:darkgrey        
 exe 'hi Title          guifg='.s:red               .' guibg='.s:darkgrey        .' gui=underline'
 
 exe 'hi Constant       guifg='.s:red               .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi String         guifg='.s:green             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Special        guifg='.s:lightgreen        .' guibg='.s:darkgrey        .' gui=none'
+exe 'hi String         guifg='.s:light_blue        .' guibg='.s:darkgrey        .' gui=none'
+exe 'hi Special        guifg='.s:dark_green        .' guibg='.s:darkgrey        .' gui=none'
 
 exe 'hi Identifier     guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Statement      guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
+exe 'hi Keyword        guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Conditional    guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Repeat         guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Structure      guifg='.s:dark_beige        .' guibg='.s:darkgrey        .' gui=none'
+" exe 'hi Structure      guifg='.s:beige             .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Function       guifg='.s:violet            .' guibg='.s:darkgrey        .' gui=none'
 
 exe 'hi PreProc        guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Operator       guifg='.s:light_orange      .' guibg='.s:darkgrey        .' gui=none'
-exe 'hi Type           guifg='.s:yellow            .' guibg='.s:darkgrey        .' gui=italic'
+exe 'hi Type           guifg='.s:green             .' guibg='.s:darkgrey        .' gui=none'
 
 "hi Identifier guifg=#7587a6
 " Type d: 'class'

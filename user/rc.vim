@@ -27,8 +27,6 @@ set undofile
 " - Ignore case if all characters in pattern are lowercase
 set ignorecase
 set smartcase
-" Global search by default
-set gdefault
 " Better search feedback
 set incsearch
 set showmatch

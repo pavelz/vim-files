@@ -69,6 +69,7 @@ Bundle 'tarruda/vim-snipmate'
 Bundle 'tarruda/nerdtree'
 Bundle 'tarruda/sessionman.vim'
 Bundle 'tarruda/vim-addon-local-vimrc'
+Bundle 'tarruda/taglist.vim'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

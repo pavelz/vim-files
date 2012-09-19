@@ -1,6 +1,7 @@
 set wildignore+=*.o,*.so,*.dll,*.exe,*.bak,*.swp,*.class,*.pyc,*.pyd,*.pyo,*~
 set wildignore+=*.zip,*.tgz,*.gz,*.bz2,*.lz,*.rar,*.7z
 
+let g:ctrlp_extensions = ['tag']
 let g:ctrlp_cmd = 'Ctrlp'
 
 fun! s:search()
@@ -9,3 +10,5 @@ fun! s:search()
 endf
 
 command Ctrlp call s:search()
+
+nnoremap <silent> <leader>p :CtrlPTag<CR>

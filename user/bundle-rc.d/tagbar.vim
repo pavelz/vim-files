@@ -15,6 +15,7 @@ let g:tagbar_type_coffee = {
 " Posix regular expressions for matching interesting items. Since this will 
 " be passed as an environment variable, no whitespace can exist in the options
 " so [:space:] is used instead of normal whitespaces.
+" Adapted from: https://gist.github.com/2901844
 let s:ctags_opts = '
   \ --langdef=coffee
   \ --langmap=coffee:.coffee

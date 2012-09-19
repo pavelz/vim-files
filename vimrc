@@ -12,6 +12,15 @@
 "   The main purpose is organize my plugins/initialization commands and keep  "
 "   each separated from third party bundles.                                  " 
 "                                                                             "
+"   Directory structure:                                                      "
+"     ./bundle            - Third party plugins.                              "
+"     ./user/rc.vim       - Vim option setup, also exec rc.d directories.     "
+"     ./user/rc.d         - Role-specific(mappings, functions...) startup.    "
+"     ./user/bundle-rc.d  - Bundle-specific startup.                          "
+"                                                                             " 
+"   Since ./user is a runtime directory, it also contains standard runtime    "
+"   directories(plugin, ftplugin, syntax...).                                 "
+"                                                                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:is_windows = has('win32') || has('win64')

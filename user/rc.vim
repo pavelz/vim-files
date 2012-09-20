@@ -1,5 +1,7 @@
 " Enable VIM features
 set nocompatible
+" Set leader before doing any maps
+let mapleader = ","
 " Allows backspacing over everything in insert mode
 set backspace=indent,eol,start
 " Disable backup

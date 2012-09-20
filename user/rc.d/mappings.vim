@@ -1,5 +1,4 @@
 " Leader mappings
-let mapleader = ","
 " Type , + space to clear search
 nnoremap <silent> <leader><space> :noh<cr>
 " Use normal metacharacters in vim searches

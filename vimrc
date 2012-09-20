@@ -72,6 +72,7 @@ Bundle 'tarruda/vim-addon-local-vimrc'
 Bundle 'tarruda/tagbar'
 Bundle 'tarruda/vim-autoclose'
 Bundle 'tarruda/vim-fugitive'
+Bundle 'tarruda/scratch.vim'
 " Python plugins
 Bundle 'tarruda/conque-shell-mirror'
 

@@ -1,12 +1,19 @@
 let s:sending_text = 0
-let s:temp_function_name = 0
+let s:saved_updatetime = &updatetime
 
-" Send all text in buffer to conqueterm.
 " Based on 'conque_term#send_selected'
-fun! SendTextToConque(mode) 
+fun! SendTextToConque(mode, all) 
   if s:sending_text
     return
   endif
+  " Conque sets the 'updatetime' option to 50 in order to use the 
+  " CursorHold hack to poll for program output and update the terminal
+  " buffer.
+  " The value of update_time is saved, since switching buffers with
+  " the 'sb' command doesn't trigger the events conqueshell needs to restore
+  " updatetime to its sane value, and making changes to the file buffer would
+  " cause a lot of swap writes(:h updatetime).
+  let s:saved_updatetime = &updatetime
   let s:sending_text = 1
   " get current buffer name
   let buffer_name = expand('%')
@@ -22,22 +29,26 @@ fun! SendTextToConque(mode)
     let text[0] = text[0][col1-1 :]
     let text[-1] = text[-1][: col2]
   else
-    let text = getline(1,'$')
+    if a:all
+      let text = getline(1,'$')
+    else
+      let text = [getline('.')]
+    endif
   endif
   call term.focus()
   for line in text
     call term.writeln(line)
   endfor
-  call term.write("\n")
   " scroll buffer left
   startinsert!
   normal! 0zH
-  " wait for the window update, then switch back
-  " to the previous buffer
-  call s:set_timeout(1, 'SwitchBack', [buffer_name, a:mode])
+  " If the buffers were switched in the current call stack, the terminal
+  " buffer would not be updated, and the eval results would not be visible. 
+  call s:after_ui_refresh('s:switch_buffer', [buffer_name, a:mode])
 endfun
 
-fun! SwitchBack(buffer_name, mode) 
+fun! s:switch_buffer(buffer_name, mode) 
+  let &updatetime = s:saved_updatetime
   let save_sb = &switchbuf
   sil set switchbuf=usetab
   exe 'sb ' . a:buffer_name
@@ -53,24 +64,22 @@ endfun
 
 fun! s:reset()
   let s:sending_text = 0
-  let &updatetime = s:saved_updatetime
-  augroup set_timeout
+  augroup conque_repl_timeout
     autocmd!
   augroup END
 endfun
 
-fun! s:set_timeout(milliseconds, F, args)
+fun! s:after_ui_refresh(F, args)
   let s:temp_function_name = a:F
   let s:temp_function_args = a:args
-  let s:saved_updatetime = &updatetime 
-  let &updatetime=a:milliseconds
-  augroup set_timeout
+  augroup conque_repl_timeout
     autocmd!
     autocmd CursorHoldI * call call(s:temp_function_name, s:temp_function_args) | call s:reset()
   augroup END
 endfun
 
-inoremap <silent> <F5> <ESC>:call SendTextToConque(0)<CR>
-nnoremap <silent> <F5> :call SendTextToConque(1)<CR>
-vnoremap <silent> <F5> :call SendTextToConque(2)<CR>
-
+inoremap <silent> <F5> <ESC>:call SendTextToConque(0, 0)<CR>
+nnoremap <silent> <F5> :call SendTextToConque(1, 0)<CR>
+vnoremap <silent> <F5> :call SendTextToConque(2, 0)<CR>
+inoremap <silent> <F6> <ESC>:call SendTextToConque(0, 1)<CR>
+nnoremap <silent> <F6> :call SendTextToConque(1, 1)<CR>

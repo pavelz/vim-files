@@ -36,10 +36,10 @@ set wrap
 " Normal text width
 set textwidth=79
 " Folding setup
-set foldmethod=expr
-set foldexpr=GetFoldLevel(v:lnum)
+set foldmethod=indent
 set foldenable
 set foldlevel=0
+set foldnestmax=10
 " Enable syntax highlighting
 syntax on
 " Enable filetype-specific settings

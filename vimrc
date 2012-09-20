@@ -71,6 +71,7 @@ Bundle 'tarruda/sessionman.vim'
 Bundle 'tarruda/vim-addon-local-vimrc'
 Bundle 'tarruda/tagbar'
 Bundle 'tarruda/vim-autoclose'
+Bundle 'tarruda/vim-fugitive'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

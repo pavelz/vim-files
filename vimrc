@@ -56,8 +56,8 @@ call vundle#rc()
 " Required setup
 Bundle 'tarruda/vundle'
 " Load plugins
-Bundle 'tarruda/ctrlp.vim'
 Bundle 'tarruda/mustache.vim'
+Bundle 'tarruda/ctrlp.vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
 " Snipmate
@@ -72,6 +72,8 @@ Bundle 'tarruda/vim-addon-local-vimrc'
 Bundle 'tarruda/tagbar'
 Bundle 'tarruda/vim-autoclose'
 Bundle 'tarruda/vim-fugitive'
+" Python plugins
+Bundle 'tarruda/conque-shell-mirror'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

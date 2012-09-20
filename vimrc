@@ -74,7 +74,7 @@ Bundle 'tarruda/vim-autoclose'
 Bundle 'tarruda/vim-fugitive'
 Bundle 'tarruda/scratch.vim'
 " Python plugins
-Bundle 'tarruda/conque-shell-mirror'
+Bundle 'tarruda/vim-conque-shell'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

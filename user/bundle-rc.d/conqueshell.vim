@@ -70,7 +70,7 @@ fun! s:set_timeout(milliseconds, F, args)
   augroup END
 endfun
 
-inoremap <silent> <F10> <ESC>:call SendTextToConque(0)<CR>
-nnoremap <silent> <F10> :call SendTextToConque(1)<CR>
-vnoremap <silent> <F10> :call SendTextToConque(2)<CR>
+inoremap <silent> <F5> <ESC>:call SendTextToConque(0)<CR>
+nnoremap <silent> <F5> :call SendTextToConque(1)<CR>
+vnoremap <silent> <F5> :call SendTextToConque(2)<CR>
 

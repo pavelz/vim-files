@@ -10,4 +10,6 @@ if has('gui_running')
   set guioptions-=m
   " Remove toolbar
   set guioptions-=T
+  " Remove scroll bars
+  set guioptions-=lr
 endif 

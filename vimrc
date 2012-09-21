@@ -75,6 +75,7 @@ Bundle 'tarruda/vim-fugitive'
 Bundle 'tarruda/scratch.vim'
 " Python plugins
 Bundle 'tarruda/vim-conque-shell'
+Bundle 'tarruda/vim-conque-repl'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

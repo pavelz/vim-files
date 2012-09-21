@@ -39,7 +39,7 @@ set wrap
 set textwidth=79
 " Folding setup
 set foldmethod=indent
-set foldenable
+set nofoldenable
 set foldlevel=0
 set foldnestmax=10
 " Enable syntax highlighting

@@ -73,6 +73,7 @@ Bundle 'tarruda/tagbar'
 Bundle 'tarruda/vim-autoclose'
 Bundle 'tarruda/vim-fugitive'
 Bundle 'tarruda/scratch.vim'
+Bundle 'tarruda/vim-commentary'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

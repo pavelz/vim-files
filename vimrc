@@ -73,6 +73,7 @@ Bundle 'tarruda/tagbar'
 Bundle 'tarruda/vim-autoclose'
 Bundle 'tarruda/vim-fugitive'
 Bundle 'tarruda/scratch.vim'
+Bundle 'tarruda/vim-commentary'
 " Python plugins
 Bundle 'tarruda/vim-conque-shell'
 Bundle 'tarruda/vim-conque-repl'

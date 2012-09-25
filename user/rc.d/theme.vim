@@ -4,7 +4,7 @@ if has('gui_running')
   if g:is_windows
     set guifont=Consolas:h12
   else
-    set guifont=Monospace\ 14
+    set guifont=Ubuntu\ Mono\ 16,Monospace\ 14
   endif
   " Remove menu bar
   set guioptions-=m

@@ -60,6 +60,7 @@ Bundle 'tarruda/ctrlp.vim'
 Bundle 'tarruda/mustache.vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
+Bundle 'tarruda/gyp.vim'
 " Snipmate
 Bundle "tarruda/vim-addon-mw-utils"
 Bundle "tarruda/tlib_vim"

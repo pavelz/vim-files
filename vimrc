@@ -56,12 +56,14 @@ call vundle#rc()
 " Required setup
 Bundle 'tarruda/vundle'
 " Load plugins
+Bundle 'tarruda/vim-repeat'
 Bundle 'tarruda/ctrlp.vim'
 Bundle 'tarruda/mustache.vim'
 Bundle 'tarruda/vim-javascript'
 Bundle 'tarruda/vim-coffee-script'
 Bundle 'tarruda/gyp.vim'
 Bundle 'tarruda/vim-less'
+Bundle 'tarruda/vim-surround'
 " Snipmate
 Bundle "tarruda/vim-addon-mw-utils"
 Bundle "tarruda/tlib_vim"

@@ -11,7 +11,7 @@ syntax match mustacheErrorL '\]\]\]\?'
 syntax match mustacheInsideErrorL '\[\[[{#<>=!\/]\?' containedin=@mustacheInsideL
 syntax region mustacheVariableL matchgroup=mustacheMarkerL start=/\[\[/ end=/\]\]/ containedin=@htmlMustacheContainerL
 syntax region mustacheVariableUnescapeL matchgroup=mustacheMarkerL start=/\[\[\[/ end=/\]\]\]/ containedin=@htmlMustacheContainerL
-syntax region mustacheSectionL matchgroup=mustacheMarkerL start='\[\[[#/]' end=/\]\]/ containedin=@htmlMustacheContainerL
+syntax region mustacheSectionL matchgroup=mustacheMarkerL start='\[\[[\^#/]' end=/\]\]/ containedin=@htmlMustacheContainerL
 syntax region mustachePartialL matchgroup=mustacheMarkerL start=/\[\[[<>]/ end=/\]\]/
 syntax region mustacheMarkerSetL matchgroup=mustacheMarkerL start=/\[\[=/ end=/=\]\]/
 syntax region mustacheCommentL start=/\[\[!/ end=/\]\]/ contains=Todo containedin=htmlHead

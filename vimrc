@@ -64,6 +64,9 @@ Bundle 'tarruda/vim-coffee-script'
 Bundle 'tarruda/gyp.vim'
 Bundle 'tarruda/vim-less'
 Bundle 'tarruda/vim-surround'
+Bundle 'Lokaltog/vim-easymotion'
+" Themes
+Bundle 'altercation/vim-colors-solarized'
 " Snipmate
 Bundle "tarruda/vim-addon-mw-utils"
 Bundle "tarruda/tlib_vim"

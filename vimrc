@@ -65,6 +65,7 @@ Bundle 'tarruda/gyp.vim'
 Bundle 'tarruda/vim-less'
 Bundle 'tarruda/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'danro/rename.vim'
 " Themes
 Bundle 'altercation/vim-colors-solarized'
 " Snipmate

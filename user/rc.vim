@@ -21,8 +21,6 @@ set expandtab
 set tabstop=8
 " Disable a feature I neveruse
 set modelines=0
-" Show relative line numbers(better for navigating with motion quantifiers)
-set relativenumber
 " Creates <FILENAME>.un~ for undoing changes after closing files
 set undofile
 " Search options:

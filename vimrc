@@ -54,34 +54,37 @@ filetype off " Required
 " Initialize vundle for package management
 call vundle#rc()
 " Required setup
-Bundle 'tarruda/vundle'
+Bundle 'gmarik/vundle'
 " Load plugins
-Bundle 'tarruda/vim-repeat'
-Bundle 'tarruda/ctrlp.vim'
-Bundle 'tarruda/mustache.vim'
-Bundle 'tarruda/vim-javascript'
-Bundle 'tarruda/vim-coffee-script'
+Bundle 'tpope/vim-repeat'
+Bundle 'kien/ctrlp.vim'
+Bundle 'juvenn/mustache.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'tarruda/gyp.vim'
-Bundle 'tarruda/vim-less'
-Bundle 'tarruda/vim-surround'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'danro/rename.vim'
 " Themes
 Bundle 'altercation/vim-colors-solarized'
 " Snipmate
-Bundle "tarruda/vim-addon-mw-utils"
-Bundle "tarruda/tlib_vim"
-Bundle "tarruda/snipmate-snippets"
-Bundle 'tarruda/vim-snipmate'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle 'garbas/vim-snipmate'
 "
-Bundle 'tarruda/nerdtree'
-Bundle 'tarruda/sessionman.vim'
-Bundle 'tarruda/vim-addon-local-vimrc'
-Bundle 'tarruda/tagbar'
-Bundle 'tarruda/vim-autoclose'
-Bundle 'tarruda/vim-fugitive'
-Bundle 'tarruda/scratch.vim'
-Bundle 'tarruda/vim-commentary'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/sessionman.vim'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'majutsushi/tagbar'
+Bundle 'Townk/vim-autoclose'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/scratch.vim'
+Bundle 'tpope/vim-commentary'
+" Python plugins
+Bundle 'vim-scripts/Conque-Shell'
+Bundle 'tarruda/vim-conque-repl'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

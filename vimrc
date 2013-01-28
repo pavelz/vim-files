@@ -69,15 +69,18 @@ Bundle 'danro/rename.vim'
 " Themes
 Bundle 'altercation/vim-colors-solarized'
 " Snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
 "
+Bundle 'ervandew/supertab'
+Bundle 'Rip-Rip/clang_complete'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/sessionman.vim'
 Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'majutsushi/tagbar'
+Bundle 'walm/jshint.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bingaman/vim-sparkup'

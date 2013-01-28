@@ -14,6 +14,10 @@ set history=500
 set ruler	
 " display incomplete commands
 set showcmd
+" Complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+" Limit popup menu height
+set pumheight=15
 " Shows line numbers
 set number
 " Global tab settings

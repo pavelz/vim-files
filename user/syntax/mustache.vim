@@ -1,4 +1,4 @@
-runtime! syntax/mustache.vim
+" runtime! syntax/mustache.vim
 " runtime! syntax/html.vim
 unlet b:current_syntax
 

@@ -18,7 +18,9 @@ set showcmd
 set number
 " Global tab settings
 set expandtab
-set tabstop=8
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 " Disable a feature I neveruse
 set modelines=0
 " Creates <FILENAME>.un~ for undoing changes after closing files
@@ -34,7 +36,7 @@ set hlsearch
 " Wrap text automatically
 set wrap
 " Normal text width
-set textwidth=79
+set textwidth=80
 " Folding setup
 set foldmethod=indent
 set nofoldenable

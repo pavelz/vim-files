@@ -80,6 +80,7 @@ Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'majutsushi/tagbar'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
+Bundle 'bingaman/vim-sparkup'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'tpope/vim-commentary'
 " Python plugins

@@ -88,6 +88,7 @@ Bundle 'vim-scripts/scratch.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/csapprox'
 Bundle 'mileszs/ack.vim'
+Bundle 'epeli/slimux'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

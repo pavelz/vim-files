@@ -14,4 +14,7 @@ if has('gui_running')
   set guioptions-=T
   " Remove scroll bars
   set guioptions-=lr
-endif 
+else
+  colorscheme darktwilight-term
+
+endif

@@ -86,9 +86,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bingaman/vim-sparkup'
 Bundle 'vim-scripts/scratch.vim'
 Bundle 'tpope/vim-commentary'
-" Python plugins
-Bundle 'vim-scripts/Conque-Shell'
-Bundle 'tarruda/vim-conque-repl'
+Bundle 'godlygeek/csapprox'
+Bundle 'mileszs/ack.vim'
 
 " Source user settings directory
 let s:user_init = g:user_rc_dir.'/rc.vim'

@@ -66,6 +66,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'danro/rename.vim'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 " Themes
 Bundle 'altercation/vim-colors-solarized'
 " Snipmate

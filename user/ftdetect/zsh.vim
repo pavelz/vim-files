@@ -1,1 +1,1 @@
-au BufNewFile,BufRead ~/.zshrc.d/functions/*/* setl filetype=zsh
+au BufNewFile,BufRead $ZDOTDIR/functions/**/* setl filetype=zsh
